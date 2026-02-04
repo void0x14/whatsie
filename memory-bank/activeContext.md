@@ -2,26 +2,24 @@
 
 ## Current Focus
 - **Message Recovery Plugin** - Building a feature to intercept and store revoked/deleted WhatsApp messages AND MEDIA.
-- Researched WAIncognito (tomer8007/whatsapp-web-incognito) - 1.8k stars
+- **Decision Phase:** Conducting deep-dive research into 3 implementation options (Pure JS, WebSocket Proxy, IndexedDB) to present evidence-based recommendation to user.
 
 ## Recent Changes (4 Feb 2026 - Session 3)
-- **Research Complete:** Analyzed WAIncognito implementation
-- **Key Finding:** Need to access WhatsApp's internal `downloadManager` API for media
-- **Committed:** Documentation and memory-bank structure to git
+- **Branch Management:** Moved work to `feature/message-recovery-plugin`, cleaned up `main`.
+- **Research:** Analyzed WAIncognito (tomer8007/whatsapp-web-incognito).
+- **Documentation:** Created MVP plan and updated TODO.
 
-## Technical Approach (from WAIncognito)
-- **WebSocket Hooking:** Intercept `WebSocket.prototype.send` and `onmessage`
-- **Internal API:** Use `require('WAWebDownloadManager').downloadAndMaybeDecrypt()`
-- **Storage:** IndexedDB for browser persistence
-- **Media:** Base64 encode decrypted media for storage
+## Technical Approach (Under Evaluation)
+- **Option A (Pure JS):** Inject JS to hook internal APIs (like WAIncognito).
+- **Option B (WebSocket Proxy):** Intercept network traffic in C++ layer.
+- **Option C (IndexedDB Monitor):** Passive monitoring of browser storage.
 
 ## Active Decisions & Considerations
-- **Opsiyon A (Pure JS):** 2-3 gün, minimal C++ değişikliği - MVP için önerilir
-- **Opsiyon B (WebSocket Proxy):** 5-7 gün, daha stabil ama karmaşık
-- **Opsiyon C (IndexedDB Monitor):** 1-2 gün, basit ama medya desteği sınırlı
+- **Evaluation Criteria:** Maintenance effort, complexity, media support, stability.
+- **Current Status:** Gathering evidence for user decision.
 
 ## Next Steps
-1. ✅ Research complete
-2. ⏳ User decision on implementation approach
-3. Implement core JavaScript injection
-4. Test with real messages
+1. Conduct detailed research on A, B, C.
+2. Present comparison report.
+3. User selects option.
+4. Implementation.
