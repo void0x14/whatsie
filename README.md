@@ -34,8 +34,38 @@ Feature rich WhatsApp web client based on Qt WebEngine for Linux Desktop
 	+ Configurable App User Agent
 	+ Application Storage management, lets you clean residual cache and persistent data
 
+## Message Recovery Plugin
+(Branch: `feature/message-recovery-plugin`)
+
+The Message Recovery plugin is an optional system designed for data resilience and long-term conversation history.
+
+### Vision
+To enhance Whatsie as a communication hub where digital interactions are preserved, ensuring a complete record of personal and professional communications.
+
+### Mission
+To provide a secure, local-only, and encrypted infrastructure for data management. We prioritize privacy through local-first data handling.
+
+### Roadmap
+
+- Phase 1: Core Implementation (Completed)
+  - SQLCipher integration for AES-256 encrypted local database.
+  - Message interception using QWebChannel and Store.Msg hooks.
+  - Local-first architecture; data is stored only on the local device.
+
+- Phase 2: Media Support and User Interface (In Progress)
+  - Recovery support for images, videos, audio, and voice messages.
+  - Integrated viewing experience within the application interface.
+  - Management and organization of recovered assets.
+
+- Phase 3: Search and Archiving (Planned)
+  - Global search functionality for preserved interactions.
+  - Dedicated gallery view for recovered media.
+  - Tools for secure export to external formats.
+
+Note: This feature is disabled by default. It can be enabled through the experimental section in the settings.
+
 ## Command line options:
-Comes with general CLI support, with a bunch of options that let you interact with already running instances of Whatsie.
+Commes with general CLI support, with a bunch of options that let you interact with already running instances of Whatsie.
 
 Run: `whatsie -h` to see all supported options.
 
