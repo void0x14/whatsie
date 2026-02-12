@@ -65,7 +65,7 @@ To provide a secure, local-only, and encrypted infrastructure for data managemen
 Note: This feature is disabled by default. It can be enabled through the experimental section in the settings.
 
 ## Command line options:
-Commes with general CLI support, with a bunch of options that let you interact with already running instances of Whatsie.
+Comes with general CLI support, with a bunch of options that let you interact with already running instances of Whatsie.
 
 Run: `whatsie -h` to see all supported options.
 
